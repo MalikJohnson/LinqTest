@@ -59,6 +59,10 @@ var  testQuery =
     where x.Key.Contains("cpu")
     select x;
 
+    var apartmentQuery = from z in apartment
+    where z.getJob()=="IT"
+    select z;
+
 
 
 // Execute the query.
@@ -77,8 +81,12 @@ var  testQuery =
     Console.WriteLine(result.Key);
 }*/
 
+foreach (var result in apartmentQuery)
+{
+    Console.WriteLine(result.getName());
+}
 
-Console.WriteLine(Tom.getName());
+
 
 
 //Console.WriteLine("Hello, World!");
