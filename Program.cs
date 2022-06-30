@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+
+
 //Linq test compared to sql
 
 List<string> words = new List<string>();
@@ -29,7 +31,21 @@ hashMap.Add("gpu", "graphical processing unit");
 hashMap.Add("cpu fan", "cools cpu");
 hashMap.Add("wifi card", "pci express card for wifi connections");
 
-    var  testQuery =
+List<Person> apartment = new List<Person>();
+Person Tom = new Person(0, "Tom", DateTime.Now, 20, "Sales");
+apartment.Add(Tom);
+Person Jane = new Person(1, "Jane", DateTime.Now, 25, "IT");
+apartment.Add(Jane);
+Person Joe = new Person(2, "Joe", DateTime.Now, 27, "Customer Service");
+apartment.Add(Joe);
+Person Bob = new Person(3, "Bob", DateTime.Now, 36, "IT");
+apartment.Add(Bob);
+Person Adam = new Person(4, "Adam", DateTime.Now, 52, "Education");
+apartment.Add(Adam);
+Person Jerry = new Person(5, "Jerry", DateTime.Now, 47, "Sales");
+apartment.Add(Jerry);
+
+var  testQuery =
     from num in testNum
     where num < 0
     select num;
@@ -43,6 +59,8 @@ hashMap.Add("wifi card", "pci express card for wifi connections");
     where x.Key.Contains("cpu")
     select x;
 
+
+
 // Execute the query.
 /*foreach (int z in testQuery)
 {
@@ -54,10 +72,13 @@ hashMap.Add("wifi card", "pci express card for wifi connections");
     Console.Write(b + " ");
 }*/
 
-foreach (var result in mapQuery)
+/*foreach (var result in mapQuery)
 {
     Console.WriteLine(result.Key);
-}
+}*/
+
+
+Console.WriteLine(Tom.getName());
 
 
 //Console.WriteLine("Hello, World!");
