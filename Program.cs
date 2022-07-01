@@ -65,7 +65,7 @@ var  testQuery =
 
 
 
-// Execute the query.
+//Print statements
 /*foreach (int z in testQuery)
 {
     Console.Write(z + " ");
